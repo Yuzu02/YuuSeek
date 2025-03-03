@@ -8,7 +8,7 @@
 
 A modern client-side bang search engine leveraging DuckDuckGo's bang shortcuts for efficient web searching.
 
-![YuuSeek Screenshot](public/screenshot.png)
+![YuuSeek Screenshot](public/YuuSeek.png)
 
 ## Overview
 
@@ -175,4 +175,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+<div align="center">
 Made with ❤️ by Yuzu02
+</div>
