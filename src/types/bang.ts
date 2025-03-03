@@ -6,7 +6,7 @@ export const BangSchema = z.object({
     d: z.string().describe("Domain"),
     r: z.number().describe("Relevance/Rank"),
     s: z.string().describe("Service name"),
-    sc: z.string().describe("Subcategory"),
+    sc: z.string().describe("Subcategory").optional(),
     t: z.string().describe("Trigger"),
     u: z.string().describe("URL template with {{{s}}} as search placeholder"),
 });

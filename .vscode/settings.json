@@ -1,4 +1,4 @@
 {
   "cSpell.words": ["favorited", "geist", "uuidv"],
-  "conventionalCommits.scopes": ["DOCS"]
+  "conventionalCommits.scopes": ["DOCS", "BANGS"]
 }
