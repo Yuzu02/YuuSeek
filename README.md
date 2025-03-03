@@ -88,6 +88,10 @@ To build the application for production:
 npm run build
 # or
 yarn build
+# or
+pnpm build
+# or
+bun build
 ```
 
 To start the production server:
@@ -96,6 +100,10 @@ To start the production server:
 npm run start
 # or
 yarn start
+# or
+pnpm start
+# or
+bun start
 ```
 
 ## Usage
