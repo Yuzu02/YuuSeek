@@ -14,14 +14,14 @@ export default function Home() {
     const animationEnabled = settings?.interfaceSettings?.animationsEnabled;
 
     return (
-        <main className="min-h-screen flex flex-col items-center justify-between p-4 pt-10 pb-10">
+        <main className="flex min-h-screen flex-col items-center justify-between p-4 pt-10 pb-10">
             {/* Theme toggle and Settings in the corner */}
             <div className="absolute top-4 right-4 flex items-center gap-2">
                 <SettingsButton />
                 <ThemeModeToggle />
             </div>
 
-            <div className="flex-grow flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
+            <div className="mx-auto flex w-full max-w-2xl flex-grow flex-col items-center justify-center">
                 <motion.div
                     initial={animationEnabled ? { opacity: 0, y: -20 } : false}
                     animate={
@@ -30,7 +30,7 @@ export default function Home() {
                     transition={{ duration: 0.5 }}
                     className="w-full"
                 >
-                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
+                    <h1 className="mb-8 text-center text-3xl font-bold md:text-4xl">
                         YuuSeek
                     </h1>
 
@@ -41,7 +41,7 @@ export default function Home() {
                         </div>
 
                         <div className="mt-8 text-center">
-                            <p className="text-muted-foreground text-sm mb-2">
+                            <p className="text-muted-foreground mb-2 text-sm">
                                 Try using bang shortcuts:
                             </p>
                             <BangShortcuts />
@@ -50,7 +50,7 @@ export default function Home() {
                 </motion.div>
             </div>
 
-            <footer className="mt-10 text-muted-foreground text-sm text-center">
+            <footer className="text-muted-foreground mt-10 text-center text-sm">
                 <p>Client-side bang search engine using DuckDuckGo bang data</p>
             </footer>
         </main>

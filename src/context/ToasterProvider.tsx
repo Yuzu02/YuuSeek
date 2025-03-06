@@ -5,7 +5,7 @@ import useCustomTheme from "@/hooks/useCustomTheme";
 function ToasterProvider() {
     const theme = useCustomTheme();
     return (
-        <div className="fixed right-4 top-4 z-50">
+        <div className="fixed top-4 right-4 z-50">
             <Toaster
                 theme={theme}
                 visibleToasts={3}

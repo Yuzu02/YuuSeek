@@ -26,7 +26,7 @@ export function SettingsDialog({
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+            <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-[600px]">
                 <DialogHeader>
                     <DialogTitle className="flex items-center gap-2">
                         <FiSettings className="h-5 w-5" />
@@ -39,7 +39,7 @@ export function SettingsDialog({
                     onValueChange={setActiveTab}
                     className="w-full"
                 >
-                    <TabsList className="grid grid-cols-3 mb-6">
+                    <TabsList className="mb-6 grid grid-cols-3">
                         <TabsTrigger value="general">General</TabsTrigger>
                         <TabsTrigger value="search">Search Engine</TabsTrigger>
                         <TabsTrigger value="interface">Interface</TabsTrigger>

@@ -30,7 +30,7 @@ export function SearchSuggestions() {
                 }
                 exit={animationEnabled ? { opacity: 0, y: 10 } : { opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="absolute z-10 mt-2 w-full bg-card border rounded-lg shadow-lg overflow-hidden"
+                className="bg-card absolute z-10 mt-2 w-full overflow-hidden rounded-lg border shadow-lg"
             >
                 <ul className="py-1">
                     {suggestions.map((bang, index) => (
@@ -47,14 +47,14 @@ export function SearchSuggestions() {
                                     : { opacity: 1 }
                             }
                             transition={{ duration: 0.2, delay: index * 0.05 }}
-                            className={`px-4 py-3 hover:bg-accent cursor-pointer transition-colors duration-150 flex items-center justify-between ${
+                            className={`hover:bg-accent flex cursor-pointer items-center justify-between px-4 py-3 transition-colors duration-150 ${
                                 index === activeSuggestion ? "bg-accent" : ""
                             } ${compactMode ? "py-2" : "py-3"}`}
                             onClick={() => handleSuggestionClick(bang)}
                         >
                             <div className="flex-1">
                                 <div className="font-medium">!{bang.t}</div>
-                                <div className="text-sm text-muted-foreground">
+                                <div className="text-muted-foreground text-sm">
                                     {bang.s} - {bang.sc}
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ export function SearchSuggestions() {
                                         e.stopPropagation();
                                         toggleFavorite(bang.t);
                                     }}
-                                    className="p-1 rounded-full hover:bg-muted transition-colors"
+                                    className="hover:bg-muted rounded-full p-1 transition-colors"
                                 >
                                     <FaStar
                                         className={`text-sm ${

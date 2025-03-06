@@ -13,7 +13,7 @@ export default function GeneralSettings() {
                 <div>
                     <label
                         htmlFor="maxHistoryItems"
-                        className="block mb-2 font-medium"
+                        className="mb-2 block font-medium"
                     >
                         Maximum History Items
                     </label>
@@ -28,7 +28,7 @@ export default function GeneralSettings() {
                                 maxHistoryItems: parseInt(e.target.value) || 0,
                             })
                         }
-                        className="w-full p-2 border rounded bg-white dark:bg-gray-800"
+                        className="w-full rounded border bg-white p-2 dark:bg-gray-800"
                     />
                 </div>
             </div>

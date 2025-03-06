@@ -65,7 +65,7 @@ export default function InterfaceSettings() {
                 <div>
                     <label
                         htmlFor="fontScale"
-                        className="block mb-2 font-medium"
+                        className="mb-2 block font-medium"
                     >
                         Font Scale: {interfaceSettings.fontScale.toFixed(1)}
                     </label>

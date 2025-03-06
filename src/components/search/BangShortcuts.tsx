@@ -60,7 +60,7 @@ export function BangShortcuts() {
                     whileHover={animationEnabled ? { scale: 1.05 } : {}}
                     whileTap={animationEnabled ? { scale: 0.95 } : {}}
                     className={cn(
-                        "px-3 py-2 bg-secondary hover:bg-secondary/80 rounded-md text-secondary-foreground transition-colors duration-200 flex items-center gap-2",
+                        "bg-secondary hover:bg-secondary/80 text-secondary-foreground flex items-center gap-2 rounded-md px-3 py-2 transition-colors duration-200",
                         settings.interfaceSettings.compactMode &&
                             "px-2 py-1 text-xs",
                     )}

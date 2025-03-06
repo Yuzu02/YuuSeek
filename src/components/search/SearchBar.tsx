@@ -95,8 +95,8 @@ export function SearchBar() {
     return (
         <form onSubmit={handleSubmit} className="relative w-full">
             <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <FiSearch className="h-5 w-5 text-muted-foreground" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <FiSearch className="text-muted-foreground h-5 w-5" />
                 </div>
 
                 <Input
@@ -105,7 +105,7 @@ export function SearchBar() {
                     value={query}
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}
-                    className={`pl-10 pr-10 py-6 text-lg ${
+                    className={`py-6 pr-10 pl-10 text-lg ${
                         settings.interfaceSettings.compactMode
                             ? "rounded-md"
                             : "rounded-lg"
@@ -125,7 +125,7 @@ export function SearchBar() {
                             clear();
                             if (inputRef.current) inputRef.current.focus();
                         }}
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                        className="absolute inset-y-0 right-0 flex items-center pr-3"
                     >
                         <FiX className="h-5 w-5" />
                     </Button>
@@ -149,11 +149,11 @@ export function SearchBar() {
                                 : { opacity: 0 }
                         }
                         transition={{ duration: 0.2 }}
-                        className="absolute right-3 -top-8 text-sm text-muted-foreground flex items-center"
+                        className="text-muted-foreground absolute -top-8 right-3 flex items-center text-sm"
                     >
                         <FaRegLightbulb className="mr-1" />
                         Press{" "}
-                        <kbd className="mx-1 px-2 py-1 bg-muted rounded">
+                        <kbd className="bg-muted mx-1 rounded px-2 py-1">
                             Tab
                         </kbd>{" "}
                         to complete
