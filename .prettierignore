@@ -6,4 +6,4 @@ node_modules
 next-env.d.ts
 next.config.ts
 bun.lockb
-/src/data/bang.ts
+bang.ts

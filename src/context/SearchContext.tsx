@@ -11,22 +11,12 @@ import React, {
 import { useBangs } from "@/hooks/useBangs";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
 import type { BangExtended } from "@/types/bang";
-import { useSettings } from "./SettingsContext";
-
-type SearchContextType = {
-    query: string;
-    setQuery: (query: string) => void;
-    suggestions: BangExtended[];
-    setSuggestions: (suggestions: BangExtended[]) => void;
-    activeSuggestion: number;
-    setActiveSuggestion: (index: number) => void;
-    showHint: boolean;
-    setShowHint: (show: boolean) => void;
-    performSearch: (query: string) => void;
-    updateSuggestions: (input: string) => void;
-    handleSuggestionClick: (bang: BangExtended) => void;
-    clear: () => void;
-};
+import { useSettings } from "@/context/SettingsContext";
+import { SearchContextType } from "@/types/searchContext";
+import {
+    getFeelingLuckyRedirect,
+    isFeelingLuckyQuery,
+} from "@/utils/feelingLucky";
 
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
@@ -44,7 +34,27 @@ export function SearchProvider({
 
     const processQuery = useCallback(
         (input: string) => {
-            // Check if the query contains a bang prefix (!, $, or ?)
+            // Empty input check
+            if (!input.trim()) return false;
+
+            // Check if it's a feeling lucky query
+            if (isFeelingLuckyQuery(input)) {
+                const url = getFeelingLuckyRedirect(
+                    input,
+                    settings.defaultSearchEngine,
+                );
+                if (url) {
+                    // Add to search history
+                    addSearchToHistory(input, "lucky", url);
+
+                    // Navigate to URL
+                    window.location.href = url;
+                    return true;
+                }
+                return false;
+            }
+
+            // Regular bang processing
             const bangRegex = /^([!$?])(\w+)(?:\s+(.*))?$/;
             const bangMatch = bangRegex.exec(input);
 
@@ -71,7 +81,7 @@ export function SearchProvider({
 
             return false;
         },
-        [findBang, addSearchToHistory],
+        [findBang, addSearchToHistory, settings.defaultSearchEngine],
     );
 
     const performSearch = useCallback(

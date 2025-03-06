@@ -3,6 +3,15 @@ import type { Bang } from "@/types/bang";
 export const defaultBangs: Bang[] = [
     {
         c: "AI",
+        d: "www.perplexity.ai",
+        r: 0,
+        s: "Perplexity",
+        sc: "AI",
+        t: "ppx",
+        u: "https://www.perplexity.ai/search?q={{{s}}}",
+    },
+    {
+        c: "AI",
         d: "www.t3.chat",
         r: 0,
         s: "T3 Chat",

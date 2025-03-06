@@ -3,7 +3,6 @@ import { BangSchema } from "./bang";
 import { SearchHistoryItemSchema } from "./history";
 
 export const UserSettingsSchema = z.object({
-    theme: z.enum(["light", "dark", "system"]),
     customBangs: z.array(BangSchema),
     favorites: z.array(z.string()),
     recentSearches: z.array(SearchHistoryItemSchema),

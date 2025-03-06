@@ -4,7 +4,7 @@
 [![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-blue)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL--3.0-green)](LICENSE)
 
 A modern client-side bang search engine leveraging DuckDuckGo's bang shortcuts for efficient web searching.
 
@@ -26,6 +26,25 @@ This is a client-side only application, meaning your search queries are never st
 - 🔒 **Privacy-Focused**: No tracking or storing of your search queries
 - 🎨 **Customizable Interface**: Settings to adjust the search experience to your preferences
 - 📱 **Mobile Friendly**: Works great on all devices
+
+### "I'm Feeling Lucky" Search
+
+You can use the "I'm Feeling Lucky" feature to go directly to the first search result by prefixing your search with an exclamation mark (!) / dollar sign ($) / question mark (?):
+
+```yaml
+!your search query
+```
+
+This works with your default search engine:
+
+- For Google, it uses the `btnI=1` parameter
+- For DuckDuckGo, it uses the `!ducky` bang
+- For other search engines, it falls back to their default search or equivalent functionality
+
+Examples:
+
+- `$wikipedia` - Takes you directly to Wikipedia.org
+- `?weather new york` - Takes you directly to a weather forecast for New York
 
 ## Tech Stack
 

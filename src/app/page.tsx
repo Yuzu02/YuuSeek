@@ -7,6 +7,7 @@ import { ThemeModeToggle } from "@/components/theme/ThemeToggle";
 import { SearchProvider } from "@/context/SearchContext";
 import { useSettings } from "@/context/SettingsContext";
 import { BangShortcuts } from "@/components/search/BangShortcuts";
+import { SettingsButton } from "@/components/settings/SettingsButton";
 
 export default function Home() {
     const { settings } = useSettings();
@@ -14,8 +15,9 @@ export default function Home() {
 
     return (
         <main className="min-h-screen flex flex-col items-center justify-between p-4 pt-10 pb-10">
-            {/* Theme toggle in the corner */}
-            <div className="absolute top-4 right-4">
+            {/* Theme toggle and Settings in the corner */}
+            <div className="absolute top-4 right-4 flex items-center gap-2">
+                <SettingsButton />
                 <ThemeModeToggle />
             </div>
 

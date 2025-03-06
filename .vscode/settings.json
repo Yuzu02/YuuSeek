@@ -1,4 +1,16 @@
 {
-  "cSpell.words": ["favorited", "geist", "uuidv"],
-  "conventionalCommits.scopes": ["DOCS", "BANGS"]
+  "cSpell.words": [
+    "bing",
+    "duckduckgo",
+    "Duckduckgo",
+    "ecosia",
+    "Ecosia",
+    "favorited",
+    "geist",
+    "searchcontext",
+    "turbopack",
+    "uuidv",
+    "yuuseek"
+  ],
+  "conventionalCommits.scopes": ["DOCS", "BANGS", "dev"]
 }
